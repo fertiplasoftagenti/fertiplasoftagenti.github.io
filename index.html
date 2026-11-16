@@ -3,109 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fertiplasoft Agenti</title>
-  <!-- Caricamento Tailwind CSS per layout e utilità responsive -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Caricamento font Inter e Outfit per una resa tipografica fedele -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            logo: ['Outfit', 'sans-serif'],
-          }
-        }
-      }
+  <title>Accesso - Fertiplasoft Agenti</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-  </script>
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .logo {
+      max-width: 340px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-accedi {
+      display: inline-block;
+      padding: 14px 48px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(135deg, #003e7e 0%, #005bb5 100%);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+      box-shadow: 0 4px 14px rgba(0, 62, 126, 0.25);
+    }
+
+    .btn-accedi:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 62, 126, 0.35);
+    }
+
+    .btn-accedi:active {
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<body class="bg-white min-h-screen flex items-center justify-center p-6 selection:bg-blue-100">
+<body>
 
-  <!-- Contenitore principale centrato -->
-  <main class="w-full max-w-lg flex flex-col items-center justify-center text-center">
+  <div class="container">
+    <!-- Puoi usare l'immagine PNG salvata nella stessa cartella -->
+    <img src="FERTIPLASOFT AGENTI - ANTEPRIMA DI STAMPA.png" alt="Logo Fertiplasoft Agenti" class="logo">
     
-    <!-- Logo vettoriale SVG Fertiplasoft Agenti -->
-    <div class="w-full max-w-[380px] mb-10 transition-transform duration-300 hover:scale-[1.01]">
-      <svg viewBox="0 0 540 205" class="w-full h-auto drop-shadow-xs" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Fertiplasoft Agenti">
-        <defs>
-          <!-- Gradiente arco blu esterno -->
-          <linearGradient id="blueArcGrad" x1="0%" y1="0%" x2="80%" y2="100%">
-            <stop offset="0%" stop-color="#005bb5" />
-            <stop offset="60%" stop-color="#003e7e" />
-            <stop offset="100%" stop-color="#002b59" />
-          </linearGradient>
-
-          <!-- Gradiente busto agente -->
-          <linearGradient id="suitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#00448a" />
-            <stop offset="100%" stop-color="#002d5c" />
-          </linearGradient>
-
-          <!-- Gradiente foglia verde -->
-          <linearGradient id="leafGrad" x1="80%" y1="0%" x2="10%" y2="100%">
-            <stop offset="0%" stop-color="#76b82a" />
-            <stop offset="55%" stop-color="#388e3c" />
-            <stop offset="100%" stop-color="#1b5e20" />
-          </linearGradient>
-
-          <!-- Gradiente testo Fertiplasoft -->
-          <linearGradient id="textBlueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#00458c" />
-            <stop offset="100%" stop-color="#002a57" />
-          </linearGradient>
-
-          <!-- Maschera per separare in modo pulito la foglia dal busto -->
-          <mask id="silhouetteMask">
-            <rect x="0" y="0" width="540" height="205" fill="white" />
-            <!-- Bordo bianco intorno alla foglia per creare lo stacco netto -->
-            <path d="M 86 184 C 78 135, 128 112, 168 72 C 178 128, 152 178, 86 184 Z" 
-                  fill="black" stroke="black" stroke-width="11" stroke-linejoin="round" />
-          </mask>
-        </defs>
-
-        <!-- Gruppo Icona Circolare a Sinistra -->
-        <g>
-          <!-- Arco blu a mezzaluna -->
-          <path d="M 164 42 A 84 84 0 1 0 118 184 A 76 80 0 1 1 164 42 Z" fill="url(#blueArcGrad)" />
-
-          <!-- Sagoma Agente in giacca e cravatta (mascherata dalla foglia) -->
-          <g mask="url(#silhouetteMask)">
-            <!-- Testa -->
-            <circle cx="106" cy="54" r="22.5" fill="url(#suitGrad)" />
-            <!-- Spalle e giacca -->
-            <path d="M 55 112 C 55 92, 72 84, 88 84 L 94 84 L 106 105 L 118 84 L 124 84 C 140 84, 157 92, 157 112 L 157 166 L 55 166 Z" fill="url(#suitGrad)" />
-            <!-- Nodo della cravatta -->
-            <polygon points="101,85 111,85 109,93 103,93" fill="url(#suitGrad)" />
-            <!-- Corpo della cravatta -->
-            <polygon points="103,95 109,95 112,118 106,127 100,118" fill="url(#suitGrad)" />
-          </g>
-
-          <!-- Foglia verde in primo piano in basso a destra -->
-          <path d="M 86 184 C 78 135, 128 112, 168 72 C 178 128, 152 178, 86 184 Z" fill="url(#leafGrad)" />
-          
-          <!-- Venatura interna bianca della foglia -->
-          <path d="M 94 176 Q 124 146 151 114 Q 127 148 94 176 Z" fill="#ffffff" opacity="0.92" />
-        </g>
-
-        <!-- Gruppo Testo a Destra -->
-        <g font-family="'Outfit', 'Inter', sans-serif">
-          <text x="192" y="108" font-size="63" font-weight="700" letter-spacing="-1.5" fill="url(#textBlueGrad)">Fertiplasoft</text>
-          <text x="195" y="168" font-size="56" font-weight="400" letter-spacing="-0.5" fill="#2e8b37">Agenti</text>
-        </g>
-      </svg>
-    </div>
-
-    <!-- Pulsante Accedi -->
-    <a href="https://fertiplasoftagenti.ai.studio"
-       class="inline-flex items-center justify-center px-12 py-3.5 text-base font-semibold text-white rounded-xl bg-gradient-to-br from-[#003e7e] to-[#005bb5] shadow-[0_4px_14px_rgba(0,62,126,0.28)] transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,62,126,0.38)] active:translate-y-0 focus:outline-none focus:ring-4 focus:ring-blue-500/30">
-      Accedi
-    </a>
-
-  </main>
+    <!-- Link diretto nella stessa finestra per attivare l'apertura automatica della PWA -->
+    <a href="https://fertiplasoft.ai.studio/" class="btn-accedi" rel="noopener">Accedi</a>
+  </div>
 
 </body>
 </html>
